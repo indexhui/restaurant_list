@@ -1,9 +1,8 @@
-
-// require package used in the project
 const express = require('express')
 const app = express()
 const port = 3000
-//set express handlebars(exphbs)
+
+//set express handlebars
 const exphbs = require('express-handlebars')
 app.engine('handlebars', exphbs({ defaultlayout: 'main' }))
 app.set('view engine', 'handlebars')
