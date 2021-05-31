@@ -18,9 +18,11 @@ app.get('/', (req, res) => {
 })
 
 //route setting for show page
+//params
+//:
 app.get('/restaurants/:restaurant_id', (req, res) => {
   const restaurant = restaurantList.results.find(restaurant => restaurant.id.toString() === req.params.restaurant_id)
-  res.render('show', { restaurant: restaurant })
+  res.render('show', { restaurant })
 })
 
 //route setting for search
