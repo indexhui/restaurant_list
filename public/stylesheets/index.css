@@ -1,3 +1,11 @@
+body {
+  text-decoration: none;
+}
+
+a , a:hover{
+  text-decoration: none;
+}
+
 header {
   overflow: hidden;
 }
@@ -71,11 +79,29 @@ header {
 
 .restaurant-show-title {
   position: relative;
-  top: -100px;
-  color: white;
+  color: black;
   text-align: center;
   font-size: 3rem;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 20px
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+.card {
+  position: relative
+}
+.card_btn_group{
+  top: 20px;
+  right:20px;
+  position: absolute;
+  margin: 10px 10px;
+  margin-top: -2px;
+  display: none;
+}
+.card:hover .card_btn_group {
+  display: block;
+}
+.edit {
+  text-align: right;
 }
 
 @media screen and (max-width: 992px) {

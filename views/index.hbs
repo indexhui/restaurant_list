@@ -1,0 +1,71 @@
+<div class="banner"></div>
+<!-- search bar -->
+<div class="container search-bar">
+  <div class="search-bar-outer">
+    <div class="search-bar-inner">
+      {{!-- search error --}}
+      <div class="error" style="color:#DC3545">
+        {{#if noResultsFound}}
+        <small>找不到餐廳，請重新查詢</small>
+        {{/if}}
+      </div>
+      <form action="/search">
+        <h4 class="mb-2">尋找餐廳：</h4>
+        <div class="input-group">
+          <input type="text" name="keyword" value="{{keyword}}" class="form-control" placeholder="輸入餐廳或分類"
+            aria-label="Restaurant Name..." value="" aria-describedby="search-button">
+          <div class="input-group-append">
+            <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- restaurant list -->
+<div class="container m-5t">
+  <div class="row">
+    {{!-- <div class="col-md-10 col-12 mx-auto">
+      <div class="card-columns"> --}}
+        <div class="row gx-12">
+          {{#each restaurants}}
+          <div class="col-lg-4">
+            <div class="card my-4">
+              <a href="/restaurants/{{ this._id }}" class="text-secondary">
+                <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+                <div class="card-body p-3">
+                  <h6 class="card-title mb-1">{{this.name}}</h6>
+
+                  <div class="restaurant-category mb-1">
+                    <i class="fas fa-utensils pr-2"></i> {{this.category}}
+                  </div>
+
+                  <span class="badge rounded-pill bg-warning font-weight-normal">
+                    {{this.rating}}
+                    <i class="fas fa-star fa-xs"></i>
+                  </span>
+
+                </div>
+                <div class="card_btn_group ">
+                  <a href="./restaurants/{{ this._id }}/edit">
+                    <button type="button" class="btn btn-primary btn-sm">
+                      編輯
+                    </button>
+                  </a>
+                  <form action="./restaurants/{{ this._id }}/delete" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                      刪除
+                    </button>
+                  </form>
+                </div>
+              </a>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        {{!--
+      </div>
+    </div> --}}
+  </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="container">
+
+  <form action="/add" method="POST" class="row g-3 my-5">
+    <div class="col-md-6">
+      <label for="name" class="form-label">餐廳名稱</label>
+      <input type="text" class="form-control" id="name" name="name">
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="name_en" class="form-label">英文名稱</label>
+      <input type="text" class="form-control" name="name_en">
+    </div>
+    <div class="col-12">
+      <label for="category" class="form-label">類別</label>
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="category">
+        <option selected>選擇分類</option>
+        <option value="中東料理">中東料理</option>
+        <option value="日本料理">日本料理</option>
+        <option value="義式餐廳">義式餐廳</option>
+        <option value="美式">美式</option>
+        <option value="台式">台式</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <label for="image" class="form-label">照片連結</label>
+      <input type="text" class="form-control" id="image" placeholder="http://" name="image">
+    </div>
+    <div class="col-md-6">
+      <label for="location" class="form-label">餐廳地址</label>
+      <input type="text" class="form-control" name="location">
+    </div>
+    <div class="col-md-6">
+      <label for="phone" class="form-label">餐廳電話</label>
+      <input type="number" class="form-control" name="phone">
+    </div>
+    <div class="col-md-6">
+      <label for="google_map" class="form-label">google map</label>
+      <input type="text" class="form-control" name="google_map">
+    </div>
+    <div class="col-12">
+      <label for="rating" class="form-label">等級</label>
+      <input type="range" class="form-range" min="0" max="5" step="0.1" name="rating">
+    </div>
+    <div class="col-12">
+      <label for="description" class="form-label">介紹</label>
+      <textarea class="form-control" name="description" rows="3"></textarea>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">送出</button>
+    </div>
+  </form>
+
+</div>
+
+
+{{!--
+<link rel="stylesheet" href="/stylesheets/edit.css">
+
+<form action="/add" method="POST" class="basic-grey">
+  <h1>Create New Restaurant
+    <span>Please fill all the texts in the fields.</span>
+  </h1>
+  <label>
+    <span>name :</span>
+    <input type="text" placeholder="name" name="name">
+  </label>
+  <label>
+    <span>category :</span>
+    <input type="text" placeholder="category" name="category">
+  </label>
+  <label>
+    <span>image :</span>
+    <input type="text" placeholder="image" name="image">
+  </label>
+  <label>
+    <span>location :</span>
+    <input type="text" placeholder="location" name="location">
+  </label>
+  <label>
+    <span>phone :</span>
+    <input type="text" placeholder="phone" name="phone">
+  </label>
+  <label>
+    <span>google_map :</span>
+    <input type="text" placeholder="google_map" name="google_map">
+  </label>
+  <label>
+    <span>rating :</span>
+    <input type="text" placeholder="rating" name="rating">
+  </label>
+  <label>
+    <span>description :</span>
+    <textarea class="input-description" type="text" placeholder="description" name="description"></textarea>
+  </label>
+  <div class="d-flex">
+    <button class="btn btn-primary ml-auto mr-2" type="submit">Create</button>
+  </div>
+</form> --}}
