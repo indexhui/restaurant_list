@@ -75,7 +75,6 @@ app.get('/new', (req, res) => {
 app.post('/add', (req, res) => {
   const newRestaurant = req.body
   const { name, name_en, category, image, location, phone, google_map, rating, description } = req.body
-  console.log(newRestaurant.name)
   Restaurant.create({
     name,
     name_en,
@@ -89,7 +88,6 @@ app.post('/add', (req, res) => {
   })
     .then(() => res.redirect('/'))
     .catch(error => console.log(newRestaurant))
-  console.log(newRestaurant)
 })
 
 //刪除
