@@ -28,7 +28,7 @@ Install by npm
 ```
 $ npm install
 ```
-Seedㄌ
+Seeds
 ```
 $ npm run seed
 ```
